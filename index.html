@@ -45,6 +45,7 @@
             <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-slate-300 uppercase tracking-wider">
                 <a href="#inicio" class="hover:text-brandOrange transition-colors">Home</a>
                 <a href="#promessa" class="hover:text-brandOrange transition-colors">Como Funciona</a>
+                <a href="#passos" class="hover:text-brandOrange transition-colors">Passo a Passo</a>
                 <a href="#modelos" class="hover:text-brandOrange transition-colors">Modelos</a>
                 <a href="#solicitar" class="hover:text-brandOrange transition-colors">Solicitar Site</a>
             </nav>
@@ -108,8 +109,71 @@
         </div>
     </section>
 
+    <!-- SEÇÃO DE PASSO A PASSO -->
+    <section id="passos" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <span class="text-xs font-bold text-brandOrange uppercase tracking-widest">Simples e Transparente</span>
+            <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mt-2 mb-4">
+                Como funciona em 3 passos
+            </h2>
+            <p class="text-slate-400 text-sm">
+                Sem burocracia, sem cobranças antecipadas e sem chateação.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Passo 1 -->
+            <div class="bg-cardDark border border-slate-800 rounded-3xl p-8 flex flex-col justify-between relative">
+                <div class="absolute -top-4 -left-4 w-10 h-10 rounded-2xl bg-brandOrange text-white font-black flex items-center justify-center text-base shadow-lg shadow-brandOrange/30">
+                    1
+                </div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-brandOrange/10 text-brandOrange flex items-center justify-center mb-6">
+                        <i data-lucide="edit-3" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Você Solicita</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Preencha o formulário rápido aqui no site com o nome da sua empresa, telefone e o seu nicho.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Passo 2 -->
+            <div class="bg-cardDark border border-slate-800 rounded-3xl p-8 flex flex-col justify-between relative">
+                <div class="absolute -top-4 -left-4 w-10 h-10 rounded-2xl bg-brandOrange text-white font-black flex items-center justify-center text-base shadow-lg shadow-brandOrange/30">
+                    2
+                </div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-brandOrange/10 text-brandOrange flex items-center justify-center mb-6">
+                        <i data-lucide="cpu" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Nós Criamos</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Nossa equipe desenvolve o seu site profissional em poucas horas, totalmente personalizado para o seu negócio.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Passo 3 -->
+            <div class="bg-cardDark border border-slate-800 rounded-3xl p-8 flex flex-col justify-between relative">
+                <div class="absolute -top-4 -left-4 w-10 h-10 rounded-2xl bg-brandOrange text-white font-black flex items-center justify-center text-base shadow-lg shadow-brandOrange/30">
+                    3
+                </div>
+                <div>
+                    <div class="w-12 h-12 rounded-xl bg-brandOrange/10 text-brandOrange flex items-center justify-center mb-6">
+                        <i data-lucide="smile" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Você Avalia</h3>
+                    <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">
+                        Te enviamos o link para testar. Se gostar, você nos chama no WhatsApp e fechamos negócio. Simples assim!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SEÇÃO DE MODELOS / VITRINE -->
-    <section id="modelos" class="py-24 px-4 max-w-7xl mx-auto">
+    <section id="modelos" class="py-24 px-4 max-w-7xl mx-auto border-t border-slate-800/60">
         <div class="text-center max-w-2xl mx-auto mb-16">
             <span class="text-xs font-bold text-brandOrange uppercase tracking-widest">Portfólio & Demonstração</span>
             <h2 class="text-3xl sm:text-4xl font-black tracking-tight text-white mt-2 mb-4">
@@ -253,7 +317,7 @@
 
         setInterval(changeText, 3000);
 
-        // Envio do formulário para o WhatsApp com todos os campos novos
+        // Envio do formulário para o WhatsApp com todos os campos preenchidos
         function sendLeadToWhatsApp(event) {
             event.preventDefault();
 
