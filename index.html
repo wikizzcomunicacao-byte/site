@@ -46,7 +46,7 @@
                 <a href="#inicio" class="hover:text-brandOrange transition-colors">Home</a>
                 <a href="#promessa" class="hover:text-brandOrange transition-colors">Como Funciona</a>
                 <a href="#modelos" class="hover:text-brandOrange transition-colors">Modelos</a>
-                <a href="#contato" class="hover:text-brandOrange transition-colors">Contato</a>
+                <a href="#solicitar" class="hover:text-brandOrange transition-colors">Solicitar Site</a>
             </nav>
 
             <a href="https://wa.me/5517981480576?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20criação%20de%20sites." target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 hover:bg-emerald-500 transition-all">
@@ -76,7 +76,7 @@
             </p>
 
             <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-                <a href="https://wa.me/5517981480576?text=Olá!%20Gostaria%20de%20ver%20como%20ficaria%20o%20site%20da%20minha%20empresa." target="_blank" class="px-8 py-4 rounded-xl bg-slate-800 border border-slate-700 text-white font-bold text-sm hover:bg-slate-700 transition-all">
+                <a href="#solicitar" class="px-8 py-4 rounded-xl bg-slate-800 border border-slate-700 text-white font-bold text-sm hover:bg-slate-700 transition-all">
                     Falar com Especialista 💬
                 </a>
                 <a href="#modelos" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brandOrange to-amber-600 text-white font-bold text-sm shadow-xl shadow-brandOrange/20 hover:scale-105 transition-all">
@@ -101,7 +101,7 @@
                 </p>
             </div>
             <div class="shrink-0">
-                <a href="https://wa.me/5517981480576?text=Olá!%20Gostaria%20de%20pedir%20um%20site%20para%20avaliar%20sem%20compromisso." target="_blank" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 hover:bg-emerald-500 transition-all text-center">
+                <a href="#solicitar" class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 hover:bg-emerald-500 transition-all text-center">
                     Quero avaliar meu site 🚀
                 </a>
             </div>
@@ -136,8 +136,8 @@
                     </ul>
                 </div>
                 <div class="px-8 pb-8">
-                    <a href="#" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-slate-800 text-white font-bold text-xs hover:bg-brandOrange transition-all">
-                        Testar Modelo Odonto 🦷
+                    <a href="#solicitar" class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-slate-800 text-white font-bold text-xs hover:bg-brandOrange transition-all">
+                        Solicitar Modelo Odonto 🦷
                     </a>
                 </div>
             </div>
@@ -157,23 +157,72 @@
                     </ul>
                 </div>
                 <div class="px-8 pb-8">
-                    <a href="#" target="_blank" class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-slate-800 text-white font-bold text-xs hover:bg-brandOrange transition-all">
-                        Testar Modelo Automotivo 🚗
+                    <a href="#solicitar" class="w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-xl bg-slate-800 text-white font-bold text-xs hover:bg-brandOrange transition-all">
+                        Solicitar Modelo Automotivo 🚗
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- SEÇÃO DE FORMULÁRIO DE SOLICITAÇÃO WHATSAPP -->
+    <section id="solicitar" class="py-20 px-4 max-w-3xl mx-auto">
+        <div class="bg-cardDark border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+            <div class="text-center max-w-lg mx-auto mb-10">
+                <span class="text-xs font-bold text-brandOrange uppercase tracking-widest">Sem Compromisso</span>
+                <h2 class="text-2xl sm:text-3xl font-black tracking-tight text-white mt-2 mb-3">
+                    Solicite seu site para avaliação
+                </h2>
+                <p class="text-slate-400 text-xs sm:text-sm">
+                    Preencha os dados abaixo. Vamos abrir o WhatsApp com sua mensagem pronta, sem chatice e sem pressão.
+                </p>
+            </div>
+
+            <form onsubmit="sendLeadToWhatsApp(event)" class="flex flex-col gap-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Seu Nome</label>
+                    <input type="text" id="leadName" required placeholder="Ex: Dr. Carlos" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brandOrange transition-all">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Nome da Empresa / Clínica</label>
+                        <input type="text" id="leadBusiness" required placeholder="Ex: Odonto Sorriso" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brandOrange transition-all">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Nicho do Negócio</label>
+                        <select id="leadNiche" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brandOrange transition-all">
+                            <option value="Clínica Odontológica">Clínica Odontológica</option>
+                            <option value="Estética Automotiva / Lava-rápido">Estética Automotiva / Lava-rápido</option>
+                            <option value="Outro Segmento">Outro Segmento</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Detalhes ou Observações (Opcional)</label>
+                    <textarea id="leadNotes" rows="3" placeholder="Ex: Gostaria de ver o modelo focado em implantes dentários..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-brandOrange transition-all resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="w-full mt-2 inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-emerald-600 text-white font-bold text-sm shadow-xl shadow-emerald-600/20 hover:bg-emerald-500 transition-all duration-300">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    Enviar Solicitação no WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+
     <!-- FOOTER -->
-    <footer id="contato" class="bg-black/60 border-t border-slate-800 text-slate-400 py-12 text-center text-xs">
+    <footer class="bg-black/60 border-t border-slate-800 text-slate-400 py-12 text-center text-xs">
         <p>&copy; 2026 XGED - Criação de Sites Profissionais. Todos os direitos reservados.</p>
     </footer>
 
-    <!-- Script para alternar o texto automaticamente -->
+    <!-- Scripts -->
     <script>
         lucide.createIcons();
 
+        // Rotação automática de texto no Hero
         const words = [
             "Sites Profissionais",
             "Entrega em 2 Dias",
@@ -197,6 +246,29 @@
         }
 
         setInterval(changeText, 3000);
+
+        // Envio do formulário para o WhatsApp
+        function sendLeadToWhatsApp(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('leadName').value;
+            const business = document.getElementById('leadBusiness').value;
+            const niche = document.getElementById('leadNiche').value;
+            const notes = document.getElementById('leadNotes').value;
+
+            const myWhatsApp = "5517981480576";
+
+            let message = `Olá! Meu nome é *${name}*.\n`;
+            message += `Tenho interesse em avaliar um site para a minha empresa.\n\n`;
+            message += `🏢 *Empresa:* ${business}\n`;
+            message += `📌 *Nicho:* ${niche}\n`;
+            if (notes.trim() !== "") {
+                message += `📝 *Detalhes:* ${notes}\n`;
+            }
+
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${myWhatsApp}?text=${encodedMessage}`, '_blank');
+        }
     </script>
 </body>
 </html>
