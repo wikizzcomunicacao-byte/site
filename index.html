@@ -56,41 +56,33 @@
         </div>
     </header>
 
-    <!-- HERO SECTION COM IMAGEM DE FUNDO ESTILO REFERÊNCIA -->
-    <section id="inicio" class="relative min-h-[90vh] pt-32 pb-20 px-4 flex flex-col items-center justify-center text-center overflow-hidden">
-        
-        <!-- IMAGEM DE FUNDO (MOSAICO DE SITES) -->
-        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop&q=80" alt="Fundo Portfólio" class="w-full h-full object-cover opacity-25 scale-105 filter blur-[2px]">
-        </div>
+    <!-- HERO SECTION COM TEXTO ALTERNADO -->
+    <section id="inicio" class="relative min-h-[85vh] pt-32 pb-16 px-4 flex flex-col items-center justify-center text-center overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800/40 via-darkBg to-darkBg pointer-events-none"></div>
 
-        <!-- CAMADA ESCURECEDORA PARA O TEXTO DESTACAR -->
-        <div class="absolute inset-0 z-0 bg-gradient-to-b from-[#0b0f19]/90 via-[#0b0f19]/80 to-[#0b0f19] pointer-events-none"></div>
-
-        <!-- CONTEÚDO PRINCIPAL DO HERO -->
         <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-6">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-slate-700 text-xs font-semibold text-brandOrange shadow-lg backdrop-blur-sm">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-brandOrange">
                 <span class="w-2 h-2 rounded-full bg-brandOrange animate-pulse"></span>
                 Transforme seu negócio digital
             </div>
 
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] drop-shadow-lg">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1]">
                 Criação de Sites <br>
-                <!-- Container com efeito de slot machine -->
+                <!-- Container com overflow-hidden para o efeito de slot machine -->
                 <span class="inline-flex overflow-hidden py-1">
                     <span class="text-brandOrange inline-block" id="rotatingText">Sites Profissionais</span>
                 </span>
             </h1>
 
-            <p class="text-slate-300 text-sm sm:text-base max-w-xl font-normal leading-relaxed drop-shadow">
+            <p class="text-slate-400 text-sm sm:text-base max-w-xl font-normal leading-relaxed">
                 Criar site profissional com SEO otimizado para Google, hospedagem incluída e domínio registrado. Templates prontos de alta conversão.
             </p>
 
             <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-                <a href="#solicitar" class="px-8 py-4 rounded-xl bg-slate-800/90 border border-slate-700 text-white font-bold text-sm hover:bg-slate-700 transition-all backdrop-blur-sm shadow-xl">
+                <a href="#solicitar" class="px-8 py-4 rounded-xl bg-slate-800 border border-slate-700 text-white font-bold text-sm hover:bg-slate-700 transition-all">
                     Falar com Especialista 💬
                 </a>
-                <a href="#solicitar" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brandOrange to-amber-600 text-white font-bold text-sm shadow-xl shadow-brandOrange/25 hover:scale-105 transition-all">
+                <a href="#solicitar" class="px-8 py-4 rounded-xl bg-gradient-to-r from-brandOrange to-amber-600 text-white font-bold text-sm shadow-xl shadow-brandOrange/20 hover:scale-105 transition-all">
                     Solicitar Meu Site 🚀
                 </a>
             </div>
