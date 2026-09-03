@@ -31,10 +31,6 @@
             display: inline-block;
             transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
         }
-        /* Efeito de perspectiva inclinado para o fundo estilo referência */
-        .hero-bg-grid {
-            transform: perspective(1000px) rotateX(15deg) rotateY(-10deg) rotate(15deg) scale(1.15);
-        }
     </style>
 </head>
 <body class="bg-darkBg text-slate-100 font-sans antialiased overflow-x-hidden">
@@ -60,44 +56,16 @@
         </div>
     </header>
 
-    <!-- HERO SECTION COM O FUNDO DE MOSAICO EM PERSPECTIVA E IMAGENS REAIS -->
+    <!-- HERO SECTION COM IMAGEM DE FUNDO ESTILO REFERÊNCIA -->
     <section id="inicio" class="relative min-h-[90vh] pt-32 pb-20 px-4 flex flex-col items-center justify-center text-center overflow-hidden">
         
-        <!-- FUNDO EM MOSAICO COM PERSPECTIVA E PRINTS REAIS DE SITES -->
-        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center opacity-30">
-            <div class="hero-bg-grid grid grid-cols-3 gap-6 w-[150%]">
-                <!-- Coluna 1 -->
-                <div class="flex flex-col gap-6">
-                    <div class="bg-slate-800 border border-slate-700/80 rounded-2xl p-3 h-60 shadow-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80" alt="Exemplo de site" class="w-full h-full object-cover rounded-xl">
-                    </div>
-                    <div class="bg-slate-800 border border-slate-700/80 rounded-2xl p-3 h-60 shadow-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=80" alt="Exemplo de site" class="w-full h-full object-cover rounded-xl">
-                    </div>
-                </div>
-                <!-- Coluna 2 -->
-                <div class="flex flex-col gap-6 mt-16">
-                    <div class="bg-slate-800 border border-slate-700/80 rounded-2xl p-3 h-60 shadow-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&auto=format&fit=crop&q=80" alt="Exemplo de site" class="w-full h-full object-cover rounded-xl">
-                    </div>
-                    <div class="bg-slate-800 border border-slate-700/80 rounded-2xl p-3 h-60 shadow-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=600&auto=format&fit=crop&q=80" alt="Exemplo de site" class="w-full h-full object-cover rounded-xl">
-                    </div>
-                </div>
-                <!-- Coluna 3 -->
-                <div class="flex flex-col gap-6 -mt-8">
-                    <div class="bg-slate-800 border border-slate-700/80 rounded-2xl p-3 h-60 shadow-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&auto=format&fit=crop&q=80" alt="Exemplo de site" class="w-full h-full object-cover rounded-xl">
-                    </div>
-                    <div class="bg-slate-800 border border-slate-700/80 rounded-2xl p-3 h-60 shadow-2xl overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=600&auto=format&fit=crop&q=80" alt="Exemplo de site" class="w-full h-full object-cover rounded-xl">
-                    </div>
-                </div>
-            </div>
+        <!-- IMAGEM DE FUNDO (MOSAICO DE SITES) -->
+        <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&auto=format&fit=crop&q=80" alt="Fundo Portfólio" class="w-full h-full object-cover opacity-25 scale-105 filter blur-[2px]">
         </div>
 
-        <!-- MÁSCARA RADIAL PARA ESCURECER O CENTRO E DESTACAR O TEXTO -->
-        <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,_rgba(11,15,25,0.80)_0%,_rgba(11,15,25,0.96)_100%)] pointer-events-none"></div>
+        <!-- CAMADA ESCURECEDORA PARA O TEXTO DESTACAR -->
+        <div class="absolute inset-0 z-0 bg-gradient-to-b from-[#0b0f19]/90 via-[#0b0f19]/80 to-[#0b0f19] pointer-events-none"></div>
 
         <!-- CONTEÚDO PRINCIPAL DO HERO -->
         <div class="relative z-10 max-w-4xl mx-auto flex flex-col items-center gap-6">
@@ -106,9 +74,9 @@
                 Transforme seu negócio digital
             </div>
 
-            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] drop-shadow-md">
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1] drop-shadow-lg">
                 Criação de Sites <br>
-                <!-- Container com overflow-hidden para o efeito de slot machine -->
+                <!-- Container com efeito de slot machine -->
                 <span class="inline-flex overflow-hidden py-1">
                     <span class="text-brandOrange inline-block" id="rotatingText">Sites Profissionais</span>
                 </span>
