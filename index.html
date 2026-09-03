@@ -26,6 +26,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .fade-text {
+            display: inline-block;
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+    </style>
 </head>
 <body class="bg-darkBg text-slate-100 font-sans antialiased overflow-x-hidden">
 
@@ -232,11 +238,11 @@
         lucide.createIcons();
 
         // ----------------------------------------------------
-        // NOVO SCRIPT: ROTAÇÃO COM EFEITO DE DESLIZAMENTO
+        // ROTAÇÃO COM EFEITO DE DESLIZAMENTO (SLOT MACHINE)
         // ----------------------------------------------------
         const words = [
             "Sites Profissionais",
-            "Entrega em 2 Dias",
+            "Entrega em 24h",
             "com Custo Baixo",
             "com SEO Incluso"
         ];
