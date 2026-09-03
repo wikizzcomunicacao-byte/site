@@ -26,12 +26,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .fade-text {
-            display: inline-block;
-            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-        }
-    </style>
 </head>
 <body class="bg-darkBg text-slate-100 font-sans antialiased overflow-x-hidden">
 
@@ -68,7 +62,10 @@
 
             <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1]">
                 Criação de Sites <br>
-                <span class="text-brandOrange fade-text" id="rotatingText">Sites Profissionais</span>
+                <!-- Container com overflow-hidden para criar a "máscara" do efeito -->
+                <span class="inline-flex overflow-hidden py-1">
+                    <span class="text-brandOrange inline-block" id="rotatingText">Sites Profissionais</span>
+                </span>
             </h1>
 
             <p class="text-slate-400 text-sm sm:text-base max-w-xl font-normal leading-relaxed">
@@ -234,7 +231,9 @@
     <script>
         lucide.createIcons();
 
-        // Rotação automática de texto no Hero
+        // ----------------------------------------------------
+        // NOVO SCRIPT: ROTAÇÃO COM EFEITO DE DESLIZAMENTO
+        // ----------------------------------------------------
         const words = [
             "Sites Profissionais",
             "Entrega em 2 Dias",
@@ -245,21 +244,35 @@
         let i = 0;
         const rotatingTextElement = document.getElementById("rotatingText");
 
+        // Configuração inicial de suavidade da transição
+        rotatingTextElement.style.transition = "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)";
+
         function changeText() {
-            rotatingTextElement.style.opacity = 0;
-            rotatingTextElement.style.transform = "translateY(10px)";
+            // 1. Desliza para cima e desaparece
+            rotatingTextElement.style.opacity = "0";
+            rotatingTextElement.style.transform = "translateY(-40px)";
             
             setTimeout(() => {
+                // 2. Troca o texto e move para baixo invisível (sem transição)
                 i = (i + 1) % words.length;
                 rotatingTextElement.textContent = words[i];
-                rotatingTextElement.style.opacity = 1;
+                rotatingTextElement.style.transition = "none";
+                rotatingTextElement.style.transform = "translateY(40px)";
+                
+                // Força o navegador a registrar a posição "escondida" antes de subir
+                void rotatingTextElement.offsetWidth;
+                
+                // 3. Desliza de volta para o centro e aparece (reativa a transição)
+                rotatingTextElement.style.transition = "all 0.5s cubic-bezier(0.16, 1, 0.3, 1)";
+                rotatingTextElement.style.opacity = "1";
                 rotatingTextElement.style.transform = "translateY(0px)";
-            }, 300);
+            }, 500); // Aguarda o tempo exato da animação de saída (0.5s)
         }
 
-        setInterval(changeText, 3000);
+        // Executa a troca a cada 3.5 segundos
+        setInterval(changeText, 3500);
 
-        // Envio do formulário para o WhatsApp com todos os campos preenchidos
+        // Envio do formulário para o WhatsApp
         function sendLeadToWhatsApp(event) {
             event.preventDefault();
 
