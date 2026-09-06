@@ -36,15 +36,16 @@
 </head>
 <body class="bg-darkBg text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-brandOrange selection:text-white">
 
-    <!-- HEADER / MENU SUPERIOR -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-darkBg/85 backdrop-blur-md border-b border-slate-800/80">
+    <!-- HEADER / MENU SUPERIOR ALINHADO -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
             
-            <!-- Logotipo SitesWave (Substitua 'logo.png' pelo nome do arquivo da sua logo com fundo transparente) -->
-            <a href="#inicio" class="flex items-center gap-3 group">
-                <img src="logo.png" alt="SitesWave Logo" class="h-10 w-auto object-contain group-hover:scale-105 transition-all">
+            <!-- Logotipo SitesWave com tamanho corrigido e visível -->
+            <a href="#inicio" class="flex items-center group py-2">
+                <img src="logo.png" alt="SitesWave Logo" class="h-12 sm:h-14 w-auto object-contain max-w-[180px] sm:max-w-[220px] group-hover:scale-105 transition-all">
             </a>
 
+            <!-- Menu de navegação centralizado -->
             <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-slate-300 uppercase tracking-wider">
                 <a href="#inicio" class="hover:text-brandOrange transition-colors">Home</a>
                 <a href="#promessa" class="hover:text-brandOrange transition-colors">Como Funciona</a>
@@ -52,10 +53,13 @@
                 <a href="#solicitar" class="hover:text-brandOrange transition-colors">Solicitar Site</a>
             </nav>
 
-            <a href="https://wa.me/5517981480576?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20criação%20de%20sites." target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 hover:bg-emerald-500 transition-all">
-                <i data-lucide="message-circle" class="w-4 h-4"></i>
-                WhatsApp
-            </a>
+            <!-- Botão WhatsApp perfeitamente alinhado -->
+            <div class="flex items-center">
+                <a href="https://wa.me/5517981480576?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20criação%20de%20sites." target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-600 text-white font-bold text-xs shadow-lg shadow-emerald-600/20 hover:bg-emerald-500 transition-all">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    WhatsApp
+                </a>
+            </div>
         </div>
     </header>
 
@@ -285,7 +289,7 @@
             const business = document.getElementById('leadBusiness').value;
             const address = document.getElementById('leadAddress').value;
             const niche = document.getElementById('leadNiche').value;
-            const notes = document.getElementById('leadNotes'].value;
+            const notes = document.getElementById('leadNotes').value;
 
             const myWhatsApp = "5517981480576";
 
